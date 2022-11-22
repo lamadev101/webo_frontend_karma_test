@@ -1,0 +1,121 @@
+.navbar, .toogleNavItem{
+  position: fixed;
+  width: 100%;
+  padding: 10px 100px;
+  z-index: 999;
+
+  .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      h2{
+        color: #4F46BA;
+      }
+      
+      .icon{
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+    .middle{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      select{
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 16px;
+      }
+    }
+    .right{
+      button{
+        width: 137px;
+        height: 52px;
+        background: #4F46BA;
+        border: none;
+        margin-left: 2rem;
+      }
+    }
+    .hamIcon{
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+    }
+  }
+}
+.active{
+  background: #7b7a7aa1;
+  backdrop-filter: blur(20px);
+}
+.goToTop{
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  z-index: 999;
+  opacity: .5;
+  cursor: pointer;
+  .upArrow{
+    font-size: 36px;
+  }
+  &:hover{
+    opacity: 1;
+  }
+}
+.toogleNavItem{
+  z-index: 999;
+  background: white;
+  padding: 0;
+
+  .container{
+    padding: 2rem;
+    flex-direction: column;
+
+    .right{
+      margin-top: 1rem;
+      button{
+        width: 100px;
+        height: 40px;
+      }
+    }
+  }
+  .closeBtn{
+    border: none;
+    background: none;
+    color: red;
+    font-size: 24px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+}
+
+
+@media (max-width: 477px){
+  .navbar{
+    padding: 10px;
+    .container{
+      flex-direction: row;
+
+      .middle, .right{
+        display: none;
+      }
+      .hamIcon{
+        display: block;
+      }
+    }
+  }
+  .goToTop{
+    bottom: 10px;
+    .upArrow{
+      font-size: 24px;
+    }
+  }
+}

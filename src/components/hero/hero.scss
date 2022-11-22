@@ -1,0 +1,185 @@
+.hero{
+  background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
+  height: auto;
+  overflow: hidden;
+  padding: 80px 100px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+
+    .left{
+      flex: 1;
+      margin-top: 2rem;
+
+      h1{
+        font-size: 50px;
+        line-height: 55px;
+      }
+
+      div{
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        button{
+          height: 40px;
+          width: 100px;
+          border: none;
+          border-radius: 2rem;
+          background: #3734A9;
+          color: white;
+          cursor: pointer;
+        }
+        .play{
+          display: flex;
+          align-items: center;
+          gap: .5rem;
+          color: #3734A9;
+          cursor: pointer;
+
+          .playIcon{
+            font-size: 36px;
+            color: #22D497;
+          }
+        }
+      }
+      .checkMark{
+        gap: 1rem;
+        span{
+          display: flex;
+          align-items: center;
+          color: #757095;
+          gap: .5rem;
+
+          .icon{
+            color: #3734A9;
+          }
+        }
+      }
+    }
+    .right{
+      position: relative;
+      flex: 1;
+      
+      .circle{
+        margin-left: 23%;
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo{
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          background: #454545;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 64px;
+          color: #E34826;
+        }
+        .text{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          animation: textRotate 10s linear infinite;
+
+          @keyframes textRotate {
+            0%{
+              transform: rotate(360deg);
+            }100%{
+              transform: rotate(0deg);
+            }
+          }
+          span{
+            font-size: 30px;
+            font-family: 'Roboto Slab';
+            text-transform: uppercase;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            top: -2px;
+            transform-origin: 0 130px;
+            color: transparent;
+            -webkit-text-stroke: 1px #E34826;
+          }
+        }
+      }
+
+      .imgs{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: -100px;
+        bottom: 150px;
+
+        img{
+          object-fit: cover;
+          transform: scaleX(-1);
+          position: absolute;
+          
+          &:first-child{
+            right:280px;
+            height: 500px;
+            overflow: hidden;
+          }
+          &:last-child{
+            right: -30px;
+            height: 500px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 477px){
+  .hero{
+    padding: 10px;
+    .container{
+      flex-direction: column-reverse;
+      .left{
+        text-align: center;
+        padding-top: 2rem;
+
+        h1{
+          font-size: 36px;
+          line-height: 40px;
+        }
+        div{
+          justify-content: center;
+        }
+      }
+      .right{
+        .circle{
+          padding-top: 6rem;
+          padding-left: 2rem;
+          width: 150px;
+          height: 150px;
+  
+          .logo{
+            width: 80px;
+            height: 80px;
+            font-size: 36px;
+          }
+          .text{
+            span{
+              font-size: 20px;
+              top: -2px;
+              transform-origin: 0 75px;
+              -webkit-text-stroke: .5px #E34826;
+            }
+          }
+        }
+        .imgs{
+          display: none;
+        }
+      }
+    }
+  }
+}

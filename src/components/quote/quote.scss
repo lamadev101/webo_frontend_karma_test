@@ -1,0 +1,41 @@
+.quote{
+  position: relative;
+  background: #C4C4C4;
+  border-radius: 10px;
+  width: 400px;
+  padding: 10px;
+  margin-top: 1rem;
+  
+  .quoteIcon{
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    text-align: center;
+
+    .icon{
+      color: white;
+      font-size: 30px;
+      margin-top: .5rem;
+    }
+  }
+}
+
+@media (max-width: 477px){
+  .quote{
+    width: auto;
+    padding:10px;
+    text-align: center;
+
+    p{
+      font-size: 12px;
+      font-style: italic;
+    }
+    strong{
+      font-size: 14px;
+    }
+  }
+}

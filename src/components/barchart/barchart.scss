@@ -1,0 +1,25 @@
+.barChart{
+  position: absolute;
+  right: -65%;
+  top: 40%;
+  width: 300px;
+  background: white;
+  z-index: 99;
+  box-shadow: 0 0 10px lightgray;
+  padding: 10px;
+
+  h2, h3{
+    margin: 0;
+  }
+}
+
+@media (max-width: 477px){
+  .barChart{
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+  }
+}

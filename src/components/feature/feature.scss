@@ -1,0 +1,98 @@
+.feature{
+  background: #C9E7F2;
+  height: 100vh;
+  padding: 80px 100px;
+
+  .container{
+    h1{
+      font-size: 50px;
+      margin-bottom: 5px;
+    }
+    .box{
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+
+      .left, .middle{
+        flex: 1;
+        background: white;
+        border-radius: 20px;
+        padding:20px 30px 0;
+        height: 250px;
+
+        .smallBox{
+          width: 30px;
+          height: 10px;
+          background: #000;
+        }
+        .largeBox{
+          height: 30px;
+          width: 55px;
+          margin-top: 5px;
+        }
+      }
+      .left{
+        .largeBox{
+          background: #FF7F5C;
+        }
+      }
+      .middle{
+        flex: 1;
+        background: white;
+        .largeBox{
+          background: #3734A9;
+        }
+      }
+      .right{
+        flex: 1;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1rem;
+
+        .top, .bottom{
+          background: white;
+          border-radius: 10px;
+          height: 49%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: left;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 477px){
+  .feature{
+    height: auto;
+    padding: 10px;
+    .container{
+      padding-top: 0;
+      h1{
+        font-size: 36px;
+      }
+      .box{
+        flex-direction: column;
+        
+        .left, .middle{
+          border-radius: 5px;
+        }
+        .right{
+          flex-direction: row;
+          .top, .bottom{
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}

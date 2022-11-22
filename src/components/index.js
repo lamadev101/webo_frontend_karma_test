@@ -1,0 +1,12 @@
+export {default as Navbar} from './navbar/Navbar';
+export {default as Hero} from './hero/Hero';
+export {default as ClientList} from './clientlist/ClientList';
+export {default as About} from './about/About';
+export {default as Service} from './services/Service';
+export {default as Feature} from './feature/Feature';
+export {default as Testimonials} from './testimonial/Testimonials';
+export {default as Statistics} from './statistics/Statistics';
+export {default as Blog} from './blog/Blog';
+export {default as Faq} from './faq/Faq';
+export {default as Banner} from './banner/Banner';
+export {default as Footer} from './footer/Footer';
