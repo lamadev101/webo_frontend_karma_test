@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className={toggle ? 'navbar active' : 'navbar'}>
         <div className="container" >
           <div className="left">
-            <a href='/'><h2>AR SHAKIR</h2></a>
+            <a href='/'><h2 style={dark[5]}>AR SHAKIR</h2></a>
             {darkMode ? <BsSun onClick={()=>setDarkMode(false)} className="icon" /> : <BsMoonStars onClick={()=>setDarkMode(true)} className="icon" />}
           </div>
           <div className="middle" style={{ display: showNavItem}}>
